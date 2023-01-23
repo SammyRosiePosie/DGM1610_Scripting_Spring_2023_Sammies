@@ -22,8 +22,6 @@ public class Variables : MonoBehaviour
 
     public string herosPower = "Healing, speed";
 
-    //Stopped at 47 mins in video
-
     // Start is called before the first frame update
     void Start()
     {

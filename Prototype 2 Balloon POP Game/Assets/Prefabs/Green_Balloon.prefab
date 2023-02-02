@@ -109,6 +109,8 @@ GameObject:
   - component: {fileID: 4839708878110569850}
   - component: {fileID: 4839708878110569851}
   - component: {fileID: 4839708878110569848}
+  - component: {fileID: 7101921262002123264}
+  - component: {fileID: 7101921262002123269}
   m_Layer: 0
   m_Name: Green_Balloon
   m_TagString: Untagged
@@ -195,6 +197,34 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7101921262002123264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4839708878110569849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 274199f001250f942a567b2886a6abb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickToPop: 3
+  scaleToIncrease: 0.1
+--- !u!114 &7101921262002123269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4839708878110569849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 548547aedbd63ad4e8212fb0b62a8699, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 1
+  upperBound: 10
 --- !u!1 &4839708879029602292
 GameObject:
   m_ObjectHideFlags: 0

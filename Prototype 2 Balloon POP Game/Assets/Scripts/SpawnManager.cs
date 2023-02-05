@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
 
-    public GameObject [] balloonPrefabs;
+    public GameObject[] balloonPrefabs;
 
     //balloonPrefabs[0] = RedBalloon;
     //balloonPrefabs[1] = GreenBalloon;
@@ -33,7 +33,7 @@ public class SpawnManager : MonoBehaviour
         Vector3 spawnPos = new Vector3(Random.Range(-xSpawnRange, xSpawnRange), ySpawnPos, 0);
         //Vector is x,Y,Z
 
-        //pic a random balloon prefab from the balloon array to spawn
+        //pick a random balloon prefab from the balloon array to spawn
         int balloonIndex = Random.Range(0, balloonPrefabs.Length);
 
         //Spawn Random Balloons on the X-Axis

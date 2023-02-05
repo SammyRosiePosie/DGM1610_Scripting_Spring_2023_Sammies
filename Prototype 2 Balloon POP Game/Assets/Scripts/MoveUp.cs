@@ -10,8 +10,6 @@ public class MoveUp : MonoBehaviour
 
     //public Balloon balloon; //referecing another script
 
-
-
     // Start is called before the first frame update
     void Start()
     {

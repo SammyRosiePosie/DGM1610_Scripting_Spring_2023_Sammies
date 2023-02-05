@@ -152,9 +152,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf12ba40e7bad524c84b084dee545bd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  balloonPrefabs: []
+  balloonPrefabs:
+  - {fileID: 4839708878110569849, guid: 906549db7fa843f4f88c6c1c8492595b, type: 3}
+  - {fileID: 8829223312778858472, guid: 2f91e929abd5d954bbeef987af1810d3, type: 3}
+  - {fileID: 1026043438245191360, guid: f18e7ec7f64f62248be9fdcf43b6467f, type: 3}
   balloonIndex: 0
-  xSpawnRange: 0
+  xSpawnRange: 8
   ySpawnPos: -5
   startDelay: 0.5
   spawnInterval: 1.5
@@ -166,7 +169,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 396925924}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.01, y: 0.49, z: -2.4094043}
+  m_LocalPosition: {x: -5, y: 1, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -344,79 +347,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.85, y: 2.07, z: -8.23}
+  m_LocalPosition: {x: -5, y: 2, z: -11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1273289229836225007 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1026043438245191360, guid: f18e7ec7f64f62248be9fdcf43b6467f, type: 3}
-  m_PrefabInstance: {fileID: 2276179133945976623}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1273289229836225012
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1273289229836225007}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 274199f001250f942a567b2886a6abb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clickToPop: 6
-  scaleToIncrease: 0.1
---- !u!114 &1273289229836225017
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1273289229836225007}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 548547aedbd63ad4e8212fb0b62a8699, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 1
-  upperBound: 10
---- !u!1 &2275236313983435313 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8829223312778858472, guid: 2f91e929abd5d954bbeef987af1810d3, type: 3}
-  m_PrefabInstance: {fileID: 7283710988225170905}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2275236313983435316
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2275236313983435313}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 274199f001250f942a567b2886a6abb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clickToPop: 8
-  scaleToIncrease: 0.1
---- !u!114 &2275236313983435321
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2275236313983435313}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 548547aedbd63ad4e8212fb0b62a8699, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 1
-  upperBound: 10
 --- !u!1001 &2276179133945976623
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -434,7 +371,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1026043438245191388, guid: f18e7ec7f64f62248be9fdcf43b6467f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.49
+      value: -2.0600002
       objectReference: {fileID: 0}
     - target: {fileID: 1026043438245191388, guid: f18e7ec7f64f62248be9fdcf43b6467f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -487,7 +424,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4839708878110569829, guid: 906549db7fa843f4f88c6c1c8492595b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.96
+      value: -4.53
       objectReference: {fileID: 0}
     - target: {fileID: 4839708878110569829, guid: 906549db7fa843f4f88c6c1c8492595b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -531,39 +468,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 906549db7fa843f4f88c6c1c8492595b, type: 3}
---- !u!1 &7101921262002123260 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4839708878110569849, guid: 906549db7fa843f4f88c6c1c8492595b, type: 3}
-  m_PrefabInstance: {fileID: 2424359744127599749}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7101921262002123264
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7101921262002123260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 274199f001250f942a567b2886a6abb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clickToPop: 3
-  scaleToIncrease: 0.1
---- !u!114 &7101921262002123269
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7101921262002123260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 548547aedbd63ad4e8212fb0b62a8699, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 1
-  upperBound: 10
 --- !u!1001 &7283710988225170905
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -581,7 +485,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8829223312778858484, guid: 2f91e929abd5d954bbeef987af1810d3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.56
+      value: -7.13
       objectReference: {fileID: 0}
     - target: {fileID: 8829223312778858484, guid: 2f91e929abd5d954bbeef987af1810d3, type: 3}
       propertyPath: m_LocalPosition.y

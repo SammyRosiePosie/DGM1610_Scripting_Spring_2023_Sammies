@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
 
     public GameObject lazerBolt;
 
+    public int points;
+
 
     // Update is called once per frame
     void Update()
@@ -50,5 +52,7 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Destroy(other.gameObject);
+
      }
+
 }

@@ -14,7 +14,9 @@ public class StarPointCode : MonoBehaviour
 
     public float spawnInterval = 10.0f;
 
-    public float xRange = 30.0f;
+    public float xRange = 20.0f;
+
+    private float spawnPosZ = 20f;
 
     //public gameObject starpoint;
 
@@ -25,7 +27,7 @@ public class StarPointCode : MonoBehaviour
 
     void StarPointCapsuleSpawn()
     {
-        Vector3 spawnPos = new Vector3(Random.Range(-xRange, xRange),0,22);
+        Vector3 spawnPos = new Vector3(Random.Range(-xRange, xRange),0,spawnPosZ);
 
         Instantiate(StarPointCapsule, spawnPos, StarPointCapsule.transform.rotation);
     }
@@ -38,14 +40,14 @@ public class StarPointCode : MonoBehaviour
         transform.Translate(Vector3.back * Time.deltaTime * speed);
     }
 
-    // private void OnTriggerEnter(Collider collision)
-    // {
-    //     Destroy(gameObject);
+    private void OnTriggerEnter(Collider collision)
+    {
+        Destroy(this.gameObject);
 
-    //     if (gameObject == null)
-    //     {
-    //         points ++;
-    //     }
-    // }
+        // if (gameObject == null)
+        // {
+        //     points ++;
+        // }
+    }
 
 }

@@ -4,15 +4,25 @@ using UnityEngine;
 
 public class StarPointSpawnManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject StarPointCapsule;
+
+    private float spawnRangeX = 20f;
+   
+    private float spawnPosZ = 20f;
+
+    private float startDelay = 2f;
+
+    private float spawnInterval = 10f;
+
     void Start()
     {
-        
+        InvokeRepeating("StarPointCapsuleSpawn", startDelay, spawnInterval);
     }
 
-    // Update is called once per frame
-    void Update()
+    void StarPointCapsuleSpawn()
     {
-        
+        Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
+                        
+        Instantiate(StarPointCapsule, spawnPos, StarPointCapsule.transform.rotation);
     }
 }

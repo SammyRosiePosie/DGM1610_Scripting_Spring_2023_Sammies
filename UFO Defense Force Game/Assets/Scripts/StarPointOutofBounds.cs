@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class StarPointOutofBounds : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float topBounds = 30.0f;
 
+    public float lowerBounds = -15.0f;
+   
     // Update is called once per frame
     void Update()
     {
-        
+        if(transform.position.z > topBounds)
+        {
+            Destroy(gameObject);
+        }
+        else if(transform.position.z < lowerBounds)
+        {
+            Destroy(gameObject);
+        }
     }
 }

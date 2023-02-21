@@ -12,7 +12,11 @@ public class Variables : MonoBehaviour
 
     public char heroLetter = 'C';
 
+    private char heroMiddleNameInital = 'T';
+
     private int herosAge = 16;
+
+    private int averageHours = 48;
 
     public float heroHeight = 6.2f;
 
@@ -20,17 +24,9 @@ public class Variables : MonoBehaviour
 
     public bool heroInvincibility = false;
 
+    public bool heroAlive = true;
+
     public string herosPower = "Healing, speed";
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

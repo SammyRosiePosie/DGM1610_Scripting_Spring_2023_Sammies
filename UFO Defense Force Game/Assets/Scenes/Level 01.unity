@@ -247,9 +247,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ufoPrefrabs:
-  - {fileID: 2709201990700243951, guid: 67079ae1ec8587b41816128c716716ce, type: 3}
-  - {fileID: 5173407745718652078, guid: 962278e938ad81d459835719e897d425, type: 3}
-  - {fileID: 5502468327722498394, guid: bc844c62b166bbf4ab4c3f3c4bfaa6b7, type: 3}
+  - {fileID: 869795021093721948, guid: a99919827e366f943add3818bc5045d8, type: 3}
+  - {fileID: 4386334761532963120, guid: 38948c1bee6fbe1498f1d01065482685, type: 3}
+  - {fileID: 6707566566431304151, guid: 3f588eec7f64d644d8cfbea9000dbb05, type: 3}
 --- !u!4 &955454978
 Transform:
   m_ObjectHideFlags: 0
@@ -358,6 +358,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 993443502}
+  - component: {fileID: 993443503}
   m_Layer: 0
   m_Name: StarPointSpawnManager
   m_TagString: Untagged
@@ -378,8 +379,21 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &993443503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 993443501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b282ce660279742859a9f16f045be8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StarPointCapsule: {fileID: 5800885280312762783, guid: e1c2467bd8f560b4ab37a4c12b0cf8e9, type: 3}
 --- !u!1 &1230615282
 GameObject:
   m_ObjectHideFlags: 0
@@ -509,43 +523,6 @@ Transform:
   m_Father: {fileID: 1935695137}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1817311210 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5800885280312762783, guid: e1c2467bd8f560b4ab37a4c12b0cf8e9, type: 3}
-  m_PrefabInstance: {fileID: 2977279309067770880}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1817311213
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1817311210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4cd41806b3860a14d9da00cf0bfc0fe3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  points: 0
-  speed: 5
-  StarPointCapsule: {fileID: 1817311210}
-  startDelay: 10
-  spawnInterval: 10
-  xRange: 30
---- !u!114 &1817311214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1817311210}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8afd0dc7020d9bc4a90c5790ae9ce045, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  topBounds: 30
-  lowerBounds: -16
 --- !u!1 &1935695133
 GameObject:
   m_ObjectHideFlags: 0
@@ -663,70 +640,3 @@ MonoBehaviour:
   blaster: {fileID: 1266832910}
   lazerBolt: {fileID: 7199877288568924484, guid: c84c6d517c59ffd478d505dcace0a9f8, type: 3}
   points: 0
---- !u!1001 &2977279309067770880
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 459227025338267147, guid: e1c2467bd8f560b4ab37a4c12b0cf8e9, type: 3}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 459227025338267147, guid: e1c2467bd8f560b4ab37a4c12b0cf8e9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 459227025338267147, guid: e1c2467bd8f560b4ab37a4c12b0cf8e9, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 459227025338267147, guid: e1c2467bd8f560b4ab37a4c12b0cf8e9, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 459227025338267147, guid: e1c2467bd8f560b4ab37a4c12b0cf8e9, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 459227025338267147, guid: e1c2467bd8f560b4ab37a4c12b0cf8e9, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 459227025338267147, guid: e1c2467bd8f560b4ab37a4c12b0cf8e9, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 459227025338267147, guid: e1c2467bd8f560b4ab37a4c12b0cf8e9, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 459227025338267147, guid: e1c2467bd8f560b4ab37a4c12b0cf8e9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 459227025338267147, guid: e1c2467bd8f560b4ab37a4c12b0cf8e9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 459227025338267147, guid: e1c2467bd8f560b4ab37a4c12b0cf8e9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5800885280312762783, guid: e1c2467bd8f560b4ab37a4c12b0cf8e9, type: 3}
-      propertyPath: m_Name
-      value: StarPointCapsule
-      objectReference: {fileID: 0}
-    - target: {fileID: 8613687566308834400, guid: e1c2467bd8f560b4ab37a4c12b0cf8e9, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8714719261725044747, guid: e1c2467bd8f560b4ab37a4c12b0cf8e9, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5304341769966545296, guid: e1c2467bd8f560b4ab37a4c12b0cf8e9, type: 3}
-    - {fileID: -9115186686724683837, guid: e1c2467bd8f560b4ab37a4c12b0cf8e9, type: 3}
-  m_SourcePrefab: {fileID: 100100000, guid: e1c2467bd8f560b4ab37a4c12b0cf8e9, type: 3}

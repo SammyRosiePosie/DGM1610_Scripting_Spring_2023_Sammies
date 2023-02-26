@@ -37,7 +37,7 @@ public class DestroyOutOfBounds : MonoBehaviour
             
             Destroy(gameObject);
             scoreManager.DecreaseScore(detectCollision.scoreToGive); //Everytime a ship sneeks past the ower bounds deduct points
-            //Debug.Log("Game Over!");
+            Debug.Log("Game Over!");
             //Time.timeScale = 0;
         }
     }

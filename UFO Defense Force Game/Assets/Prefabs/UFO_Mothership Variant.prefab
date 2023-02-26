@@ -201,9 +201,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8622426005646758506, guid: 67079ae1ec8587b41816128c716716ce, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2765160321633911313, guid: 67079ae1ec8587b41816128c716716ce, type: 3}
+      propertyPath: scoreToGive
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 2709201990700243951, guid: 67079ae1ec8587b41816128c716716ce, type: 3}
       propertyPath: m_Name
-      value: UFO_Mothership
+      value: UFO_Mothership Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6553913458453165741, guid: 67079ae1ec8587b41816128c716716ce, type: 3}
       propertyPath: m_RootOrder
@@ -248,6 +256,10 @@ PrefabInstance:
     - target: {fileID: 6553913458453165741, guid: 67079ae1ec8587b41816128c716716ce, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8730135541475501810, guid: 67079ae1ec8587b41816128c716716ce, type: 3}
+      propertyPath: speed
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67079ae1ec8587b41816128c716716ce, type: 3}

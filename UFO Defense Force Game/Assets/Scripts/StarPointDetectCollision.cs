@@ -6,6 +6,7 @@ public class StarPointDetectCollision : MonoBehaviour
 {
     void OnTriggerEnter(Collider other)
     {
-        Destroy(this.gameObject); //Destoy this gameobject
+        if(other.gameObject.CompareTag("Player"))
+            Destroy(gameObject); //Destoy this gameobject
     }
 }

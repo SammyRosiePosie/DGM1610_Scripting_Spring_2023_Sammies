@@ -209,6 +209,10 @@ PrefabInstance:
       propertyPath: scoreToGive
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: -2765160321633911313, guid: 67079ae1ec8587b41816128c716716ce, type: 3}
+      propertyPath: explosionParticle
+      value: 
+      objectReference: {fileID: 3822464796708875424, guid: e77e80f7b658c304a8e2211ebf4d7f63, type: 3}
     - target: {fileID: 2709201990700243951, guid: 67079ae1ec8587b41816128c716716ce, type: 3}
       propertyPath: m_Name
       value: UFO_Mothership Variant

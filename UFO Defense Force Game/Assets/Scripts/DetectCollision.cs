@@ -8,6 +8,8 @@ public class DetectCollision : MonoBehaviour
     
     public int scoreToGive;
     
+    public ParticleSystem explosionParticle; //Store the particle system
+
     void Start()
     {
        scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>(); //Reference scoremanager
@@ -19,17 +21,10 @@ public class DetectCollision : MonoBehaviour
         {
             Destroy(gameObject); //Destoy this gameobject
             Destroy(other.gameObject); //Destory the other gameobject it hits
+            Explosion();
         }
-        
+       
         scoreManager.IncreaseScore(scoreToGive); //Increase Score
-    }
-
-    /*
-    public ParticleSystem exposionParticle; //Store the particle system
-        
-    void OnTriggerEnter(Collider other)
-    {
-        Explosion();
     }
 
     void Explosion()
@@ -37,5 +32,5 @@ public class DetectCollision : MonoBehaviour
         Instantiate(explosionParticle, transform.position, transform.rotation);
     }
 
-    */
+    
 }

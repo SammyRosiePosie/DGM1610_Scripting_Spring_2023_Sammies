@@ -158,6 +158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreToGive: 50
+  explosionParticle: {fileID: 3822464796708875424, guid: e77e80f7b658c304a8e2211ebf4d7f63, type: 3}
 --- !u!1 &5050200581435264113
 GameObject:
   m_ObjectHideFlags: 0

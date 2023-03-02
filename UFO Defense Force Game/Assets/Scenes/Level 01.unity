@@ -1171,6 +1171,7 @@ MonoBehaviour:
   xRange: 20
   blaster: {fileID: 1266832910}
   lazerBolt: {fileID: 7199877288568924484, guid: c84c6d517c59ffd478d505dcace0a9f8, type: 3}
+  gameManager: {fileID: 0}
   points: 0
 --- !u!54 &1935695139
 Rigidbody:

@@ -5,22 +5,22 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float horizontalInput;
-
     public float speed = 25.0f;
-
     public float xRange = 30.0f;
 
     public Transform blaster;
-
     public GameObject lazerBolt;
-
     public GameManager gameManager;
 
-    public int points;
-
+    //audio variables
+    private AudioSource blasterAudio;
+    public AudioClip laserBlast;
+    
     void Start()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>(); //Reference GameManager Script on GameManager Object
+        //Get Audiosource component
+        blasterAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -48,6 +48,7 @@ public class PlayerController : MonoBehaviour
         //If space bar is pressed fire lazerbolt
         if(Input.GetKeyDown(KeyCode.Space) && gameManager.isGameOver == false) //*Second condition gameManager.isGameOver prevents the player form shooting after isGameOver becomes true
         {
+            blasterAudio.PlayOneShot(laserBlast, 0.05f); //play blasterAudio sound clip
             //Create laserbolt at the blaster transform position maintaing the objects rotation
             Instantiate(lazerBolt, blaster.transform.position, lazerBolt.transform.rotation);
         }
@@ -58,7 +59,6 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Destroy(other.gameObject);
-
-     }
+    }
 
 }

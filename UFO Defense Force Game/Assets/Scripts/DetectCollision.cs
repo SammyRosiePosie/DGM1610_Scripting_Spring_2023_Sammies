@@ -10,9 +10,13 @@ public class DetectCollision : MonoBehaviour
     
     public ParticleSystem explosionParticle; //Store the particle system
 
+    private AudioSource explosionAudio;
+    public AudioClip explosionBoom;
+
     void Start()
     {
        scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>(); //Reference scoremanager
+       explosionAudio = GetComponent<AudioSource>();
     }
 
     void OnTriggerEnter(Collider other)
@@ -21,6 +25,7 @@ public class DetectCollision : MonoBehaviour
         {
             Destroy(gameObject); //Destoy this gameobject
             Destroy(other.gameObject); //Destory the other gameobject it hits
+            explosionAudio.PlayOneShot(explosionBoom,1.0f);
             Explosion();
         }
        

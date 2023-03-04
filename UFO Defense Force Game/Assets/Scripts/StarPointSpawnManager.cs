@@ -21,7 +21,7 @@ public class StarPointSpawnManager : MonoBehaviour
 
     void StarPointCapsuleSpawn()
     {
-        Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
+        Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 2, spawnPosZ);
                         
         Instantiate(StarPointCapsule, spawnPos, StarPointCapsule.transform.rotation);
     }

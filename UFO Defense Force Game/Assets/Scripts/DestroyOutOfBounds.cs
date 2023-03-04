@@ -9,6 +9,8 @@ public class DestroyOutOfBounds : MonoBehaviour
     public float lowerBounds = -15.0f;
 
     private ScoreManager scoreManager; //Reference the score manager so that we can update the score
+
+    private GameManager gameManager;
     
     private DetectCollision detectCollision;
 
@@ -16,6 +18,7 @@ public class DestroyOutOfBounds : MonoBehaviour
     {
         scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
         detectCollision = GetComponent<DetectCollision>();//Getting the component DetectCollisions
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
     
     /*
@@ -34,10 +37,10 @@ public class DestroyOutOfBounds : MonoBehaviour
         }
         else if(transform.position.z < lowerBounds)
         {
-            
             Destroy(gameObject);
             scoreManager.DecreaseScore(detectCollision.scoreToGive); //Everytime a ship sneeks past the ower bounds deduct points
             Debug.Log("Game Over!");
+            gameManager.isGameOver = true;
             //Time.timeScale = 0;
         }
     }

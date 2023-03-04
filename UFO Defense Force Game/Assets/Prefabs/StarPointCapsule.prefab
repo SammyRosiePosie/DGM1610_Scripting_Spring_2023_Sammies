@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: -8159318454653567285}
   m_Layer: 0
   m_Name: StarPointCapsule
-  m_TagString: Untagged
+  m_TagString: Starpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -173,6 +173,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 303a807c7cb43e9448e8b7cc5c8990c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bonusPoints: 250
+  starExplosionParticle: {fileID: 6289638578367270823, guid: b502bbd512c2841438588b4a977222f3, type: 3}
 --- !u!54 &-5115950090883341705
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -188,7 +190,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
 --- !u!65 &-8159318454653567285
 BoxCollider:
   m_ObjectHideFlags: 0

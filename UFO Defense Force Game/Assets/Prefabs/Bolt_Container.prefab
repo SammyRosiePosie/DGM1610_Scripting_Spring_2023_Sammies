@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4670849843586627576}
   - component: {fileID: 228002435854031927}
   - component: {fileID: 4011810930203913537}
+  - component: {fileID: -7486550913475938501}
   m_Layer: 0
   m_Name: Bolt_Container
   m_TagString: LazerBolt
@@ -78,6 +79,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-7486550913475938501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7199877288568924484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3d93bb904a418147bc3264c3c9a734e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lazerTrailParticles: {fileID: 104628689805243776, guid: 9eb0772a722ce0e4eaeb04ced2ab782e, type: 3}
 --- !u!1001 &3100725042374938518
 PrefabInstance:
   m_ObjectHideFlags: 0

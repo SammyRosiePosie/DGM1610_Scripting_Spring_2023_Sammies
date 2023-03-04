@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - LazerBolt
+  - Starpoint
   layers:
   - Default
   - TransparentFX

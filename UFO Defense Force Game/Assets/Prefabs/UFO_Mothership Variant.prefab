@@ -205,6 +205,10 @@ PrefabInstance:
       propertyPath: m_IsKinematic
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8622426005646758506, guid: 67079ae1ec8587b41816128c716716ce, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -2765160321633911313, guid: 67079ae1ec8587b41816128c716716ce, type: 3}
       propertyPath: scoreToGive
       value: 200

@@ -130,6 +130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   topBounds: 30
   lowerBounds: -16
+  endGameExplosion: {fileID: 8300000, guid: 7303323a76f542446be0b048a620228c, type: 3}
 --- !u!54 &4019186565419492010
 Rigidbody:
   m_ObjectHideFlags: 0

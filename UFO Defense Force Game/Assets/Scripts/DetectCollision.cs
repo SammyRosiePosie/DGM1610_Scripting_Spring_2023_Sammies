@@ -25,7 +25,7 @@ public class DetectCollision : MonoBehaviour
         {
             Destroy(gameObject); //Destoy this gameobject
             Destroy(other.gameObject); //Destory the other gameobject it hits
-            explosionAudio.PlayOneShot(explosionBoom,1.0f);
+            explosionAudio.PlayOneShot(explosionBoom, 1.0f);
             Explosion();
         }
        

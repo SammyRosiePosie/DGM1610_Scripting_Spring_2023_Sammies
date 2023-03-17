@@ -13,12 +13,16 @@ public class DestroyOutOfBounds : MonoBehaviour
     private GameManager gameManager;
     
     private DetectCollision detectCollision;
+    
+    private AudioSource endGameExplosionSound;
+    public AudioClip endGameExplosion;
 
     void Start()
     {
         scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
         detectCollision = GetComponent<DetectCollision>();//Getting the component DetectCollisions
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        endGameExplosionSound = GetComponent<AudioSource>();
     }
     
     /*
@@ -41,6 +45,7 @@ public class DestroyOutOfBounds : MonoBehaviour
             scoreManager.DecreaseScore(detectCollision.scoreToGive); //Everytime a ship sneeks past the ower bounds deduct points
             Debug.Log("Game Over!");
             gameManager.isGameOver = true;
+            endGameExplosionSound.PlayOneShot(endGameExplosion, 1.0f);
             //Time.timeScale = 0;
         }
     }

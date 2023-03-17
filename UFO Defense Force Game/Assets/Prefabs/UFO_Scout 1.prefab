@@ -130,6 +130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   topBounds: 30
   lowerBounds: -16
+  endGameExplosion: {fileID: 8300000, guid: 7303323a76f542446be0b048a620228c, type: 3}
 --- !u!54 &5941729263138709593
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -171,7 +172,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 01c830c422dafeb4196187c22d451d87, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

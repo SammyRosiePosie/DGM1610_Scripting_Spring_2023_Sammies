@@ -8,8 +8,8 @@ public class GameManager : MonoBehaviour
 
    private GameObject gameOverText;
 
-   private AudioSource endGameExplosionSound;
-   public AudioClip endGameExplosion;
+//    private AudioSource endGameExplosionSound;
+//    public AudioClip endGameExplosion;
 
     void Awake()
     {
@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         gameOverText = GameObject.Find("GameOverText");
-        endGameExplosionSound = GetComponent<AudioSource>();
+        //endGameExplosionSound = GetComponent<AudioSource>();
     }
 
    
@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
         if(isGameOver)
         {
             EndGame(); //Start EndGame Method
-            endGameExplosionSound.PlayOneShot(endGameExplosion, 1.0f);
+            //endGameExplosionSound.PlayOneShot(endGameExplosion, 1.0f);
         }
         else
         {

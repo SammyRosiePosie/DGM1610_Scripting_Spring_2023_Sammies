@@ -6,9 +6,15 @@ public class LazerTrail : MonoBehaviour
 {
     public ParticleSystem lazerTrailParticles;
 
+    void Awake()
+    {
+        lazerTrailParticles = GameObject.Find("Lazertrail").GetComponent<ParticleSystem>();
+    }
+
     void LazerParticles()
     {
-        Instantiate(lazerTrailParticles, transform.position, transform.rotation);
+        //Instantiate(lazerTrailParticles, transform.position, transform.rotation);
+        lazerTrailParticles.Play();
     }
 
 }

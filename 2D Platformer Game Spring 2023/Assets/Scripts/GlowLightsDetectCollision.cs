@@ -4,31 +4,31 @@ using UnityEngine;
 
 public class GlowLightsDetectCollision : MonoBehaviour
 {
-   /*
-   private ScoreManager scoreManager; //A variable to hold the reference to the scoremanager
-    
-   public int bonusPoints;
-   
-   public ParticleSystem starExplosionParticle; //Store the particle system
-   void Start()
-   {
-    scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>(); //Reference scoremanager
+        private GlowLightNumberCountUI glowLightsManager;
+
+    public int glowLightCount;
+
+    private void Start()
+    {
+        glowLightsManager = GameObject.Find("GlowLightsManager").GetComponent<GlowLightNumberCountUI>();
     }
 
-   void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D (Collider2D other)
     {
         if(other.gameObject.CompareTag("Player"))
         {
-            Destroy(gameObject); //Destoy this gameobject
-            StarExplosion();  
-        }   
-
-        scoreManager.IncreaseScore(bonusPoints); //Increase Score
+            Destroy(gameObject);
+            glowLightsManager.IncreaseCount(glowLightCount);
+        }
     }
-
-    void StarExplosion()
-    {
-        Instantiate(starExplosionParticle, transform.position, transform.rotation);
-    }
-    */
+    
+    /*
+    private void OnTriggerEnter2D(Collider2D collision)
+   {
+        if (collision.tag == "Player")
+        {
+            Destroy(gameObject);
+        }
+   }
+   */
 }

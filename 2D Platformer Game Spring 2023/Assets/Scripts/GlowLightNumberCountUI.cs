@@ -5,28 +5,20 @@ using TMPro;
 
 public class GlowLightNumberCountUI : MonoBehaviour
 {
-    /*
-    public int score; //Keep our score value
+    public int count; 
 
-    public TextMeshProUGUI scoreText; //Visual text element to be modified
+    public TextMeshProUGUI countText;
 
-    //This function rewards the player
-    public void IncreaseScore(int amount) //This method when called incrases the score by a predetermied amount set in score variable
+    //Adds to count hopefully
+    public void IncreaseCount(int amount)
     {
-        score += amount; //Add amount to the score
-        UpdateScoreText(); //Update the score UI Text
+        count += amount;
+        UpdateCountText();
     }
-
-    //This funciton penalizes the player
-    public void DecreaseScore(int amount) //This method when called decreases the score by a predetermied amount set in score variable
+    
+    public void UpdateCountText()
     {
-        score -= amount; //Subtract amount to the score
-        UpdateScoreText(); //Update the score UI Text
+        countText.text = "Glow Lights: " + count;
     }
-
-    public void UpdateScoreText() //This method updates the score in the HUD UI Text
-    {
-        scoreText.text = "Score: "+ score;
-    }
-    */
+    
 }

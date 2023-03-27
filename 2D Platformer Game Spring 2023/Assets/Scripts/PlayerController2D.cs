@@ -13,7 +13,7 @@ public class PlayerController2D : MonoBehaviour
     //Player Rigidbody
     [Header("Rigidbody Component")]
     private Rigidbody2D rb;
-    private bool isFacingRight = true;
+    public bool isFacingRight = true;
 
     //Player Jump
     [Header("Player Jump Settings")]

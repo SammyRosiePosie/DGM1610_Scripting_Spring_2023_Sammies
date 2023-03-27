@@ -18,6 +18,7 @@ public class RangeWeaponAttack : MonoBehaviour
 
     void Shoot()
     {
-        Instantiate(projectile,firePoint.position,firePoint.rotation);
+        Instantiate(projectile, firePoint.position, firePoint.rotation);
     }
+  
 }

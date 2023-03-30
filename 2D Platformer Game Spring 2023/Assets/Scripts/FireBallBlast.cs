@@ -8,31 +8,33 @@ public class FireBallBlast : MonoBehaviour
     public int damage = 1;
     
     private Rigidbody2D rb;
-    public bool isFacingRight = true;
-    private PlayerController2D player; 
+    //public bool isFacingRight = true;
+    private PlayerController2D playerController2D; 
 
     // Start is called before the first frame update
     void Start()
     {
-        
         //Get Rigidbody Component
         rb = GetComponent<Rigidbody2D>(); 
-        player = GameObject.Find("Player").GetComponent<PlayerController2D>();
+        playerController2D = GameObject.Find("Player").GetComponent<PlayerController2D>();
+       
+        if(playerController2D.isFacingRight == true)
+       {
+            rb.velocity = transform.right * speed * Time.deltaTime; //This line of code add velocity and make the gameobject move forward
+            Debug.Log("Right fire");
+       }
+       else if(playerController2D.isFacingRight == false)
+       {
+            rb.velocity = -transform.right * speed * Time.deltaTime;
+            Debug.Log("Left Fire");
+       }
 
     }
 
     // Update is called once per frame
     void Update()
     {
-       if(isFacingRight /*&& player.isFacingRight = true*/)
-       {
-            rb.velocity = transform.right * speed * Time.deltaTime; //This line of code add velocity and make the gameobject move forward
-       }
-       else if(!isFacingRight /*&& player.isFacingRight = false*/)
-       {
-            rb.velocity = -transform.right * speed * Time.deltaTime;
-       }
-       
+              
        //rb.velocity = transform.right * speed * Time.deltaTime; //This line of code add velocity and make the gameobject move forward        
     }
 

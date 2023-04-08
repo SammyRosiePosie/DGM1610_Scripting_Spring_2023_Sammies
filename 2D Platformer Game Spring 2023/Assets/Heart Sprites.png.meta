@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2c62173d7f5f9094e94c9aa67260d3bc
+guid: 533317cd8b73b504f835d59027e6424a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,49 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MushroomDance_w1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 36b1a6cc92e24ab4187ba2665ab67a92
-      internalID: 1192155470
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MushroomDance_w2
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1efee1e223406d84b9a46b06ccb616a3
-      internalID: 678982244
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MushroomDance_w3
+      name: Heart Sprites_0
       rect:
         serializedVersion: 2
         x: 0
@@ -167,20 +125,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 726079bdea54ef2479e3d99e1e034962
-      internalID: -1578321169
+      spriteID: 30a721fef7fb6f2489271c184c35be3e
+      internalID: -1757330908
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MushroomDance_w4
+      name: Heart Sprites_1
       rect:
         serializedVersion: 2
         x: 32
@@ -188,20 +146,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ba9b67f00fc1a044800304ad15e5c14
-      internalID: 18523428
+      spriteID: 797557d2ecc6e6a49afecd104505f146
+      internalID: -790454852
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MushroomDance_j1
+      name: Heart Sprites_2
       rect:
         serializedVersion: 2
         x: 0
@@ -209,35 +167,14 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d66acced2d136e4e8692b31c863dde9
-      internalID: 956708256
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MushroomDance_j2
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1c4d04288bb671146b4595cbe70bd140
-      internalID: 1534434661
+      spriteID: c489001bbcbc4434086885b516bcfe1d
+      internalID: 373614286
       vertices: []
       indices: 
       edges: []
@@ -253,12 +190,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      MushroomDance_j1: 956708256
-      MushroomDance_w3: -1578321169
-      MushroomDance_j2: 1534434661
-      MushroomDance_w4: 18523428
-      MushroomDance_w1: 1192155470
-      MushroomDance_w2: 678982244
+      Heart Sprites_1: -790454852
+      Heart Sprites_2: 373614286
+      Heart Sprites_0: -1757330908
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

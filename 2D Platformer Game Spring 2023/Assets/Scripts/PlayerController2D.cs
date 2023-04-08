@@ -24,16 +24,29 @@ public class PlayerController2D : MonoBehaviour
 
     public bool doubleJump;
 
+    [Header ("Animations")]
+    private Animator playerAnim;
+
     // Start is called before the first frame update
     void Start()
     {
         //Get Rigidbody Component Reference
         rb = GetComponent<Rigidbody2D>();
+        playerAnim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        if(moveInput > 0 || moveInput < 0)
+        {
+            playerAnim.SetBool("isWalking", true);
+        }
+        else
+        {
+            playerAnim.SetBool("isWalking", false);
+        }
+        
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround); //Define what is ground and check for ground
 
         moveInput = Input.GetAxis("Horizontal"); //Get the Horizontal Keybinding which will return a value between -1 and 1
@@ -63,10 +76,12 @@ public class PlayerController2D : MonoBehaviour
         {
             rb.velocity = Vector2.up * jumpForce; //Makes the player jump
             doubleJump = false;
+            playerAnim.SetTrigger("JumpTrig");
         }
         else if(Input.GetKeyDown(KeyCode.Space) && !doubleJump && isGrounded)
         {
             rb.velocity = Vector2.up * jumpForce; //Apply jumpForce to player making the player jump
+            playerAnim.SetTrigger("JumpTrig");
         }
     }
 

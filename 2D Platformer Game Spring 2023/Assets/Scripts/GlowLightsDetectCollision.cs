@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GlowLightsDetectCollision : MonoBehaviour
 {
-        private GlowLightNumberCountUI glowLightsManager;
+    private GlowLightNumberCountUI glowLightsManager;
 
     public int glowLightCount;
 

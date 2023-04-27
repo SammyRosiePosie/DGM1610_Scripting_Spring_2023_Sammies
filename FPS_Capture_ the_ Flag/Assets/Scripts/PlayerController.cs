@@ -40,6 +40,39 @@ public class PlayerController : MonoBehaviour
         GameUI.instance.UpdateAmmoText(weapon.curAmmo, weapon.maxAmmo); */
     }
 
+ void Move()
+    {
+        float x = Input.GetAxis("Horizontal") * moveSpeed;  //Get left and right input
+        float z = Input.GetAxis("Vertical") * moveSpeed;    //Get forward and back input
+
+        //Move direction relative to camera
+        Vector3 dir = transform.right * x + transform.forward * z;
+
+        dir.y = rb.velocity.y;  
+        rb.velocity = dir;  //apply force in the relative dirrection of the camera
+    }
+
+    void CamLook()
+    {
+        float y = Input.GetAxis("Mouse X") * lookSensitivity;
+        rotX += Input.GetAxis("Mouse Y") * lookSensitivity;
+
+        rotX = Mathf.Clamp(rotX, minLookX, maxLookX);
+        camera.transform.localRotation = Quaternion.Euler(-rotX, 0, 0);
+        transform.eulerAngles += Vector3.up * y;
+    }
+
+    void Jump()
+    {
+        Ray ray = new Ray(transform.position, Vector3.down);
+
+        if(Physics.Raycast(ray, 1.1f))
+        {
+            //Add force to jump
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        }
+    }
+
     //Applies Damage to the player
     public void TakeDamage(int damage)
     {
@@ -71,39 +104,6 @@ public class PlayerController : MonoBehaviour
         //weapon.curAmmo = Mathf.Clamp(weapon.curAmmo + amountToGive, 0, weapon.maxAmmo);
         //GameUI.instance.UpdateAmmoText(weapon.curAmmo, weapon.maxAmmo);
         Debug.Log("Player has collected ammo!");
-    }
-
-    void Move()
-    {
-        float x = Input.GetAxis("Horizontal") * moveSpeed;  //Get left and right input
-        float z = Input.GetAxis("Vertical") * moveSpeed;    //Get forward and back input
-
-        //Move direction relative to camera
-        Vector3 dir = transform.right * x + transform.forward * z;
-
-        dir.y = rb.velocity.y;  
-        rb.velocity = dir;  //apply force in the relative dirrection of the camera
-    }
-
-    void CamLook()
-    {
-        float y = Input.GetAxis("Mouse X") * lookSensitivity;
-        rotX += Input.GetAxis("Mouse Y") * lookSensitivity;
-
-        rotX = Mathf.Clamp(rotX, minLookX, maxLookX);
-        camera.transform.localRotation = Quaternion.Euler(-rotX, 0, 0);
-        transform.eulerAngles += Vector3.up * y;
-    }
-
-    void Jump()
-    {
-        Ray ray = new Ray(transform.position, Vector3.down);
-
-        if(Physics.Raycast(ray, 1.1f))
-        {
-            //Add force to jump
-            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-        }
     }
 
     // Update is called once per frame

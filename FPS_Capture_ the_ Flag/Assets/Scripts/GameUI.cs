@@ -8,17 +8,15 @@ using UnityEngine.SceneManagement;
 public class GameUI : MonoBehaviour
 {
     [Header("HUD")]
-    public TextMeshProUGUI scoreText;
-    public TextMeshProUGUI ammoText;
-    public Image healthBarFill;
-
+    public TextMeshProUGUI pickUpText;
+        
     [Header("Pause Menu")]
     public GameObject pauseMenu;
 
     [Header ("End Game Screen")]
     public GameObject endGameScreen;
     public TextMeshProUGUI endGameHeaderText;
-    public TextMeshProUGUI endGameScoreText;
+    public TextMeshProUGUI endGamePickUpText;
 
     //Instance/Singleton
     public static GameUI instance;
@@ -28,20 +26,10 @@ public class GameUI : MonoBehaviour
         //Set instance to this script
         instance = this;
     }
-    
-    public void UpdateHealthBar(int curHp, int maxHp)
-    {
-        healthBarFill.fillAmount = (float)curHp / (float)maxHp;
-    }
 
-    public void UpdateScoreText( int score)
+    public void UpdatePickUpText(int score)
     {
-        scoreText.text = "Score: " + score;
-    }
-
-    public void UpdateAmmoText(int curAmmo, int maxAmmo)
-    {
-        ammoText.text = "Ammo: " + curAmmo + " / " + maxAmmo;
+        pickUpText.text = "PickUp: " + score;
     }
 
     public void TogglePauseMenu(bool paused)
@@ -54,7 +42,7 @@ public class GameUI : MonoBehaviour
         endGameScreen.SetActive(true);
         endGameHeaderText.text = won == true ? "You Win" : "You Lose";
         endGameHeaderText.color = won == true ? Color.green : Color.red;
-        endGameScoreText.text = "<b>Score</b>\n" + score;
+        endGamePickUpText.text = "<b>Score</b>\n" + score;
     }
 
     public void OnResumeButton()
@@ -64,11 +52,11 @@ public class GameUI : MonoBehaviour
 
     public void OnRestartButton()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Level_0");
     }
 
     public void OnMenuButton()
     {
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("MainMenu");
     }
 }

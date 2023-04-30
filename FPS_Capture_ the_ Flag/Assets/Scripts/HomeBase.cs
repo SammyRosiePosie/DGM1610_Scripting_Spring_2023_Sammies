@@ -21,7 +21,7 @@ public class HomeBase : MonoBehaviour
         if(other.CompareTag("Player") && gm.hasFlag)
         {
             Debug.Log("Player has reached homebase!");
-            //gm.PlaceFlag(); //Run Place Flag function in game manager
+            gm.PlaceFlag(); //Run Place Flag function in game manager
             flagRend.enabled = true; //Make flag visable
         }
     }

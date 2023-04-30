@@ -27,6 +27,10 @@ public class Pickup : MonoBehaviour
     //Get audio for pickup
     public AudioClip pickupSFX;
 
+    public ParticleSystem sparkleParticle; 
+
+    private GameUI gameUI;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -54,11 +58,13 @@ public class Pickup : MonoBehaviour
                 break;
             }
 
-            //Reference Audo source to play sound effect
-            //other.GetComponent<AudioSource>().PlayOneShot(pickupSFX);
+            //Reference Auido source to play sound effect
+            other.GetComponent<AudioSource>().PlayOneShot(pickupSFX);
 
             //Destroy Pickup
             Destroy(gameObject);
+
+            gameUI.UpdatePickUpText(healthAmount);
         }
     }
 

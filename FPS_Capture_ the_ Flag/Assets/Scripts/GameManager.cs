@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
 
     public bool gamePaused;
 
+    public GameUI gameUI;
+
     //Instance
     public static GameManager instance;
 
@@ -52,7 +54,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = gamePaused == true ? 0.0f : 1.0f;
 
         //Toggle the pause menu and hide cursor
-        //GameUI.instance.TogglePauseGame(gamePaused);
+        GameUI.instance.TogglePauseMenu(gamePaused);
         Cursor.lockState = gamePaused == true ? CursorLockMode.None : CursorLockMode.Locked;
     }
 
@@ -61,9 +63,9 @@ public class GameManager : MonoBehaviour
         curScore += score;
 
         //Update score text
-        GameUI.instance.UpdateScoreText(curScore);
+        GameUI.instance.UpdatePickUpText(curScore);
 
-        //Do have enoguth points to win
+        //Do have enough points to win
         if(curScore >= scoreToWin)
             WinGame();
     }
@@ -71,7 +73,7 @@ public class GameManager : MonoBehaviour
     void WinGame()
     {
         Debug.Log("You've Won the Game!");
-        //Time.timeScale = 0; //Freeze the Game
+        Time.timeScale = 0; //Freeze the Game
 
         //Show win screen
         GameUI.instance.SetEndGameScreen(true, curScore);
@@ -88,5 +90,6 @@ public class GameManager : MonoBehaviour
     public void PlaceFlag()
     {
         flagPlaced = true;
+        AddScore(1);
     }
 }
